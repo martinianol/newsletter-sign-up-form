@@ -1,28 +1,25 @@
 import { useState } from "react";
 import "./App.css";
+import Card from "./components/common/Card/Card";
+import Button from "./components/common/Button/Button";
+import ConfirmModal from "./components/ConfirmModal/ConfirmModal";
 
 function App() {
+  const [showModal, setShowModal] = useState(true);
 
+  const handleDismiss = () => {
+    setShowModal((prevState) => !prevState);
+  };
   return (
     <>
       {/* <!-- Sign-up form start --> */}
-      Stay updated! Join 60,000+ product managers receiving monthly updates on:
-      Product discovery and building what matters Measuring to ensure updates
-      are a success And much more! Email address email@company.com Subscribe to
-      monthly newsletter
-      {/* <!-- Sign-up form end --> */}
-      {/* <!-- Success message start --> */}
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
-      {/* <!-- Success message end --> */}
-      <div class="attribution">
-        Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-          Frontend Mentor
-        </a>
-        . Coded by <a href="#">Your Name Here</a>.
-      </div>
+      <Card>
+        Stay updated! Join 60,000+ product managers receiving monthly updates
+        on: Product discovery and building what matters Measuring to ensure
+        updates are a success And much more! Email address email@company.com
+        <Button>Subscribe to monthly newsletter</Button>
+      </Card>
+      {showModal && <ConfirmModal onDismiss={handleDismiss} />}
     </>
   );
 }
