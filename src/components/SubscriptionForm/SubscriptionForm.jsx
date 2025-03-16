@@ -7,7 +7,7 @@ const SubscriptionForm = ({ onSubscribe }) => {
   return (
     <Card>
       <Form>
-        <Image src="/src/assets/images/illustration-sign-up-mobile.svg" />
+        <Image />
         <Body>
           <Title>Stay updated!</Title>
           <Text>
@@ -44,21 +44,32 @@ const Form = styled.form`
     min-height: unset;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     max-width: 56.5rem;
     min-height: unset;
     flex-direction: row-reverse;
+    gap: 2rem;
   }
 `;
 
-const Image = styled.img`
+const Image = styled.div`
   width: calc(100% + 48px);
+  height: auto;
   transform: translate(-24px, -24px);
+  background-image: url("/src/assets/images/illustration-sign-up-mobile.svg");
+  background-size: cover;
+  background-position: center;
+  border-end-end-radius: 16px;
+  aspect-ratio: 1.32;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     width: 100%;
     transform: unset;
     border-radius: 16px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    background-image: url("/src/assets/images/illustration-sign-up-desktop.svg");
   }
 `;
 
