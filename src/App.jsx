@@ -5,7 +5,11 @@ import Button from "./components/common/Button/Button";
 import ConfirmModal from "./components/ConfirmModal/ConfirmModal";
 
 function App() {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleSubscribe = () => {
+    setShowModal((prevState) => !prevState);
+  };
 
   const handleDismiss = () => {
     setShowModal((prevState) => !prevState);
@@ -17,7 +21,9 @@ function App() {
         Stay updated! Join 60,000+ product managers receiving monthly updates
         on: Product discovery and building what matters Measuring to ensure
         updates are a success And much more! Email address email@company.com
-        <Button>Subscribe to monthly newsletter</Button>
+        <Button onClick={handleSubscribe}>
+          Subscribe to monthly newsletter
+        </Button>
       </Card>
       {showModal && <ConfirmModal onDismiss={handleDismiss} />}
     </>
