@@ -40,16 +40,15 @@ const Form = styled.form`
   min-height: 100vh;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-    max-width: 38rem;
     min-height: unset;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    max-width: 56.5rem;
-    min-height: unset;
     flex-direction: row-reverse;
     gap: 2rem;
   }
+
+
 `;
 
 const Image = styled.div`
@@ -77,6 +76,16 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    max-width: 38rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    max-width: 56.5rem;
+    min-height: unset;
+    gap: 2rem;
+  }
 `;
 
 const List = styled.ul``;
