@@ -2,6 +2,7 @@ import Card from "../common/Card/Card";
 import Button from "../common/Button/Button";
 import styled from "styled-components";
 import { Title, Text } from "../common/Texts/Texts.styled";
+import Input from "../common/Input/GeneralInput";
 
 const SubscriptionForm = ({ onSubscribe }) => {
   return (
@@ -24,7 +25,10 @@ const SubscriptionForm = ({ onSubscribe }) => {
               <Text>And much more!</Text>
             </ListItem>
           </List>
-          Email address email@company.com
+          <Inputs>
+            <Input label="Email address" placeholder="email@company.com" />
+          </Inputs>
+
           <Button onClick={onSubscribe}>Subscribe to monthly newsletter</Button>
         </Body>
       </Form>
@@ -37,6 +41,7 @@ export default SubscriptionForm;
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   min-height: 100vh;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
@@ -47,8 +52,6 @@ const Form = styled.form`
     flex-direction: row-reverse;
     gap: 2rem;
   }
-
-
 `;
 
 const Image = styled.div`
@@ -88,5 +91,31 @@ const Body = styled.div`
   }
 `;
 
-const List = styled.ul``;
-const ListItem = styled.li``;
+const List = styled.ul`
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Adjust spacing between items */
+`;
+
+const ListItem = styled.li`
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem; /* Space between bullet and text */
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-image: url("/src/assets/images/icon-success.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+`;
+
+const Inputs = styled.div`
+  margin-top: 1rem;
+`
