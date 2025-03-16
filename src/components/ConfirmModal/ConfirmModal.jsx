@@ -1,6 +1,7 @@
 import Card from "../common/Card/Card";
 import Button from "../common/Button/Button";
-import { Modal, Title, Text, Bold, Actions } from "./ConfirmModal.styled";
+import { Modal, Actions } from "./ConfirmModal.styled";
+import { Title, Text, Bold } from "../common/Texts/Texts.styled";
 
 const ConfirmModal = ({ onDismiss }) => {
   return (
@@ -12,7 +13,7 @@ const ConfirmModal = ({ onDismiss }) => {
           width={64}
           height={64}
         />
-        <Title>Thanks for subscribing! </Title>
+        <Title>Thanks for subscribing!</Title>
         <Text>
           A confirmation email has been sent to{" "}
           <Bold>ash@loremcompany.com</Bold>. Please open it and click the button
