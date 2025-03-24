@@ -5,18 +5,21 @@ export const Form = styled.form`
   flex-direction: column;
   min-height: 100vh;
   gap: 1rem;
+  padding: 1.5rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     min-height: unset;
     gap: 2.5rem;
     min-width: clamp(25rem, 80vw, 33rem);
+    padding: 2.5rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
     flex-direction: row-reverse;
     gap: 4rem;
     align-items: center;
-    max-width: 52.5rem;
+    max-width: 56.5rem;
+    padding: 1.5rem 2rem;
   }
 `;
 
