@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   border-radius: 8px;
   cursor: pointer;
   transition: background 500ms ease-in-out;
+  align-self: flex-start;
 
 
   &:hover {
