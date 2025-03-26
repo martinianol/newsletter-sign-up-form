@@ -207,7 +207,7 @@ Error generating stack: `+e.message+`
     display: inline-block;
     width: 21px;
     height: 21px;
-    background-image: url("/src/assets/images/icon-success.svg");
+    background-image: url("public/images/icon-success.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
