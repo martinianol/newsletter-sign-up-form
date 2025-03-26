@@ -46,7 +46,7 @@ const SubscriptionForm = ({ onSubscribe }) => {
               isError={isError}
               onBlur={handleBlur}
             />
-            <Button onClick={handleSubscribe} $shouldHighlight={isValidEmail}>
+            <Button onClick={handleSubscribe} $shouldHighlight={isValidEmail} $allowHover>
               Subscribe to monthly newsletter
             </Button>
           </Interactions>
