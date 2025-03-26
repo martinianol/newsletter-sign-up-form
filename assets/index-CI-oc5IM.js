@@ -137,7 +137,7 @@ Error generating stack: `+e.message+`
   width: calc(100% + 48px);
   height: auto;
   transform: translate(-24px, -24px);
-  background-image: url("/src/assets/images/illustration-sign-up-mobile.svg");
+  background-image: url("${"/newsletter-sign-up-form/"}/assets/images/illustration-sign-up-mobile.svg");
   background-size: cover;
   background-position: center;
   border-end-end-radius: 16px;
@@ -153,7 +153,7 @@ Error generating stack: `+e.message+`
   }
 
   @media (min-width: ${({theme:i})=>i.breakpoints.lg}) {
-    background-image: url("/src/assets/images/illustration-sign-up-desktop.svg");
+    background-image: url("${"/newsletter-sign-up-form/"}/assets/images/illustration-sign-up-desktop.svg");
     height: 37.0625rem;
     aspect-ratio: 0.67;
   }
