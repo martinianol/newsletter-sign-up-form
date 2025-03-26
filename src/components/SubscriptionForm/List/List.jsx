@@ -38,7 +38,7 @@ const ListItem = styled.li`
     display: inline-block;
     width: 21px;
     height: 21px;
-    background-image: url("/src/assets/images/icon-success.svg");
+    background-image: url("${import.meta.env.BASE_URL}/assets/images/icon-success.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }

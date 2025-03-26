@@ -27,7 +27,7 @@ export const Image = styled.div`
   width: calc(100% + 48px);
   height: auto;
   transform: translate(-24px, -24px);
-  background-image: url("/src/assets/images/illustration-sign-up-mobile.svg");
+  background-image: url("${import.meta.env.BASE_URL}/assets/images/illustration-sign-up-mobile.svg");
   background-size: cover;
   background-position: center;
   border-end-end-radius: 16px;
@@ -43,7 +43,7 @@ export const Image = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-    background-image: url("/src/assets/images/illustration-sign-up-desktop.svg");
+    background-image: url("${import.meta.env.BASE_URL}/assets/images/illustration-sign-up-desktop.svg");
     height: 37.0625rem;
     aspect-ratio: 0.67;
   }
