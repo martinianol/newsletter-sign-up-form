@@ -76,30 +76,7 @@ export const Information = styled.div`
   }
 `;
 
-export const List = styled.ul`
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* Adjust spacing between items */
-`;
 
-export const ListItem = styled.li`
-  list-style: none;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem; /* Space between bullet and text */
-  align-items: center;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: url("/src/assets/images/icon-success.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-`;
 
 export const Interactions = styled.div`
   display: flex;
