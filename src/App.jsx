@@ -1,9 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import SubscriptionForm from "./components/SubscriptionForm/SubscriptionForm";
-import Card from "./components/common/Card/Card";
-import Button from "./components/common/Button/Button";
-
 import ConfirmModal from "./components/ConfirmModal/ConfirmModal";
 
 function App() {
@@ -17,10 +14,14 @@ function App() {
     setSubscribedEmail(null);
   };
 
-  return !subscribedEmail ? (
-    <SubscriptionForm onSubscribe={handleSubscribe} />
-  ) : (
-    <ConfirmModal onDismiss={handleDismiss} email={subscribedEmail} />
+  return (
+    <main>
+      {!subscribedEmail ? (
+        <SubscriptionForm onSubscribe={handleSubscribe} />
+      ) : (
+        <ConfirmModal onDismiss={handleDismiss} email={subscribedEmail} />
+      )}
+    </main>
   );
 }
 

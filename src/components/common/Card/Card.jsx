@@ -6,7 +6,7 @@ const Card = ({ children }) => {
 
 export default Card;
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.article`
   width: fit-content;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
