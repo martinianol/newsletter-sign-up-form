@@ -43,6 +43,12 @@ const useSubscriptionForm = (onSubscribe) => {
     return emailRegex.test(email);
   };
 
+  const handleBlur = () => {
+    if (email.trim() === "") {
+      setIsError(true);
+    }
+  };
+
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (validateEmail(email)) {
@@ -57,6 +63,7 @@ const useSubscriptionForm = (onSubscribe) => {
     inputRef,
     isError,
     isValidEmail,
+    handleBlur,
     handleInputChange,
     handleSubscribe,
   };

@@ -3,7 +3,15 @@ import styled from "styled-components";
 
 const GeneralInput = forwardRef(
   (
-    { type = "email", placeholder, label, errorLabel, onChange, isError },
+    {
+      type = "email",
+      placeholder,
+      label,
+      errorLabel,
+      onChange,
+      isError,
+      onBlur,
+    },
     ref
   ) => {
     return (
@@ -17,6 +25,7 @@ const GeneralInput = forwardRef(
           type={type}
           placeholder={placeholder}
           onChange={onChange}
+          onBlur={onBlur}
           $isError={isError}
         />
       </StyledDiv>
@@ -50,7 +59,8 @@ const ErrorLabel = styled(Label)`
 
 const Input = styled.input`
   outline: 1px solid
-    ${({ theme, $isError }) => ($isError ? theme.colors.red : theme.colors.grey)};
+    ${({ theme, $isError }) =>
+      $isError ? theme.colors.red : theme.colors.grey};
   border: none;
   color: ${({ theme, $isError }) =>
     $isError ? theme.colors.red : theme.colors.blue[800]};
