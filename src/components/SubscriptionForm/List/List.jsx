@@ -19,14 +19,14 @@ const FeaturesList = () => {
 
 export default FeaturesList;
 
-export const List = styled.ul`
+const List = styled.ul`
   padding-left: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem; /* Adjust spacing between items */
 `;
 
-export const ListItem = styled.li`
+const ListItem = styled.li`
   list-style: none;
   display: grid;
   grid-template-columns: auto 1fr;

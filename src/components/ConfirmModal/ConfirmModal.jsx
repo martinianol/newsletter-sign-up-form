@@ -19,7 +19,9 @@ const ConfirmModal = ({ onDismiss, email }) => {
           open it and click the button inside to confirm your subscription.
         </Text>
         <Actions>
-          <Button onClick={onDismiss}>Dismiss message</Button>
+          <Button onClick={onDismiss} $allowHover>
+            Dismiss message
+          </Button>
         </Actions>
       </Modal>
     </Card>

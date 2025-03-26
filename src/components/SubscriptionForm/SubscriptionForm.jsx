@@ -44,7 +44,7 @@ const SubscriptionForm = ({ onSubscribe }) => {
               onChange={handleInputChange}
               isError={isError}
             />
-            <Button onClick={handleSubscribe} shouldHighlight={isValidEmail}>
+            <Button onClick={handleSubscribe} $shouldHighlight={isValidEmail}>
               Subscribe to monthly newsletter
             </Button>
           </Interactions>

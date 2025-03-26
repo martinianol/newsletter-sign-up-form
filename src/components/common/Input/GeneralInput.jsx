@@ -17,7 +17,7 @@ const GeneralInput = forwardRef(
           type={type}
           placeholder={placeholder}
           onChange={onChange}
-          isError={isError}
+          $isError={isError}
         />
       </StyledDiv>
     );
@@ -50,16 +50,16 @@ const ErrorLabel = styled(Label)`
 
 const Input = styled.input`
   outline: 1px solid
-    ${({ theme, isError }) => (isError ? theme.colors.red : theme.colors.grey)};
+    ${({ theme, $isError }) => ($isError ? theme.colors.red : theme.colors.grey)};
   border: none;
-  color: ${({ theme, isError }) =>
-    isError ? theme.colors.red : theme.colors.blue[800]};
+  color: ${({ theme, $isError }) =>
+    $isError ? theme.colors.red : theme.colors.blue[800]};
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   font: ${({ theme }) => theme.fontStyles.textPreset2Regular};
   transition: outline-color 0.3s, box-shadow 0.3s;
-  background-color: ${({ isError, theme }) =>
-    isError ? theme.colors.red10 : "unset"};
+  background-color: ${({ $isError, theme }) =>
+    $isError ? theme.colors.red10 : "unset"};
 
   &::placeholder {
     font: ${({ theme }) => theme.fontStyles.textPreset2Regular};
@@ -68,7 +68,7 @@ const Input = styled.input`
   }
 
   &:focus {
-    outline-color: ${({ theme, isError }) =>
-      isError ? theme.colors.red : theme.colors.blue[800]};
+    outline-color: ${({ theme, $isError }) =>
+      $isError ? theme.colors.red : theme.colors.blue[800]};
   }
 `;
