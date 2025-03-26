@@ -8,7 +8,7 @@ const ConfirmModal = ({ onDismiss, email }) => {
     <Card>
       <Modal>
         <img
-          src="public/assets/images/icon-success.svg"
+          src={`${import.meta.env.BASE_URL}assets/images/icon-success.svg`}
           alt="Success"
           width={64}
           height={64}
