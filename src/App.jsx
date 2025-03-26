@@ -7,20 +7,20 @@ import Button from "./components/common/Button/Button";
 import ConfirmModal from "./components/ConfirmModal/ConfirmModal";
 
 function App() {
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [subscribedEmail, setSubscribedEmail] = useState(null);
 
-  const handleSubscribe = () => {
-    setIsSubscribed((prevState) => !prevState);
+  const handleSubscribe = (email) => {
+    setSubscribedEmail(email);
   };
 
   const handleDismiss = () => {
-    setIsSubscribed((prevState) => !prevState);
+    setSubscribedEmail(null);
   };
 
-  return !isSubscribed ? (
+  return !subscribedEmail ? (
     <SubscriptionForm onSubscribe={handleSubscribe} />
   ) : (
-    <ConfirmModal onDismiss={handleDismiss} />
+    <ConfirmModal onDismiss={handleDismiss} email={subscribedEmail} />
   );
 }
 

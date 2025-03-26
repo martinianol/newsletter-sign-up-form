@@ -7,6 +7,7 @@ export const theme = {
       800: "#242742",
     },
     red: "#FF6155",
+    red10: "rgba(255, 97, 85, 0.1)",
     gradient: "linear-gradient(90deg, #FF6A3A, #FF527B)",
   },
   fonts: {
